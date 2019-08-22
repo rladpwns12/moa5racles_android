@@ -17,7 +17,8 @@ public class MenuActivity extends Activity {
     }
 
     public void goToApplyList(View view){
-        Toast.makeText(this, "현재 서비스 공사중입니다.", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, UserListActivity.class);
+        startActivity(intent);
     }
     public void goToRequestList(View view){
         Intent intent = new Intent(this, RequestListActivity.class);
