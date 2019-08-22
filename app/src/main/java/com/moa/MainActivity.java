@@ -7,10 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.moa.handler.BackPressCloseHandler;
-
 public class MainActivity extends AppCompatActivity {
-    private static final String MAIN_URL= "http://192.168.30.166:8089/admin";
+    private static final String MAIN_URL= "http://192.168.30.164:8089/admin";
 
     private Button button;
     @Override

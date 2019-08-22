@@ -42,17 +42,17 @@ public class RequestListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View itemLayout = view;
         if(view == null){
-            itemLayout = layoutInflater.inflate(R.layout.activity_requestlist, viewGroup, false);
+            itemLayout = layoutInflater.inflate(R.layout.requestlist_item, viewGroup, false);
         }
 
-        TextView nickTxtV = itemLayout.findViewById(R.id.nickTxtV);
-        TextView dateTxtV = itemLayout.findViewById(R.id.dateTxtV);
-        TextView priceTxtV = itemLayout.findViewById(R.id.priceTxtV);
+        TextView nickTxtV = (TextView)itemLayout.findViewById(R.id.nickTxtV);
+        TextView dateTxtV = (TextView)itemLayout.findViewById(R.id.dateTxtV);
+        TextView priceTxtV = (TextView)itemLayout.findViewById(R.id.priceTxtV);
 
-        RequestListVO requestListVO = list.get(i);
-        nickTxtV.setText(requestListVO.getNick());
-        dateTxtV.setText(requestListVO.getDate()+" "+requestListVO.getTime());
-        priceTxtV.setText(requestListVO.getPrice());
+        System.out.println(list.get(i).getPrice());
+        nickTxtV.setText(list.get(i).getNick());
+        dateTxtV.setText(list.get(i).getDate());
+        priceTxtV.setText(list.get(i).getPrice()+"원");
 
         return itemLayout;
     }
