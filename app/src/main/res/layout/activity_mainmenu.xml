@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/moa_loading"
+    >
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginRight="16dp"
+        android:background="#512D8D"
+        android:fontFamily="sans-serif"
+        android:onClick="onClick"
+        android:text="시작하기"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+        <!--<ImageView
+            android:id="@+id/loading_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="60dp"
+            android:src= />-->
+
+
+
+</LinearLayout>
