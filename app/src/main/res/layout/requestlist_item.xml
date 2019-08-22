@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nickTxtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="최민성짱"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/dateTxtV"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/nickTxtV"
+        android:layout_marginLeft="20dp"
+        android:text="2019-08-22 19:20:22"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/priceTxtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:text="150000원"
+        android:textSize="20dp" />
+
+</RelativeLayout>
