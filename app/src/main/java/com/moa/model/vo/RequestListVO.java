@@ -44,4 +44,14 @@ public class RequestListVO {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "RequestListVO{" +
+                "date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", nick='" + nick + '\'' +
+                ", price='" + price + '\'' +
+                '}';
+    }
 }

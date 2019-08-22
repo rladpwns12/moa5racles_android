@@ -29,4 +29,7 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.google.android.gms:play-services-plus:7.8.0'
+    // https://mvnrepository.com/artifact/org.leibnizcenter/xml-to-json
+    implementation group: 'org.leibnizcenter', name: 'xml-to-json', version: '0.9.0'
+
 }

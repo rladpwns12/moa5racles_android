@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ffffff">
 
     <TextView
         android:id="@+id/nickTxtV"
@@ -18,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_below="@id/nickTxtV"
         android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
         android:text="2019-08-22 19:20:22"
         android:textSize="20dp"/>
 
