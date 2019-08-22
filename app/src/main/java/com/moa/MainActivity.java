@@ -1,34 +1,41 @@
 package com.moa;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.moa.handler.BackPressCloseHandler;
 
 public class MainActivity extends AppCompatActivity {
     private static final String MAIN_URL= "http://5racle.powerlinux.co.kr/admin";
     private WebView webView;
+    private WebSettings webSettings;
     private BackPressCloseHandler backPressCloseHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         Intent intent = new Intent(this, LoadingActivity.class);
         startActivity(intent);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //--start of loading
+
+        //-- start of loading
         backPressCloseHandler = new BackPressCloseHandler(this);
-        //--end of loading
-        webView = findViewById(R.id.webView);
+        //-- end of loading
+
+        //-- start of webView
+        webView = (WebView)findViewById(R.id.webView);
         webView.setWebViewClient(new MyWebClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setHorizontalScrollBarEnabled(false);//가로스크롤없애기
         webView.setVerticalScrollBarEnabled(false);//세로스크롤없애기
         webView.loadUrl(MAIN_URL);
+        //-- end of webView
     }
 
     class MyWebClient extends WebViewClient {
