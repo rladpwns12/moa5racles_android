@@ -3,8 +3,6 @@ package com.moa;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.moa.handler.BackPressCloseHandler;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String MAIN_URL= "http://5racle.powerlinux.co.kr/admin";
-    private WebView webView;
-    private WebSettings webSettings;
-    private BackPressCloseHandler backPressCloseHandler;
+    private static final String MAIN_URL= "http://192.168.30.166:8089/admin";
+
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onClick(View v){
-        System.out.println("ok");
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
