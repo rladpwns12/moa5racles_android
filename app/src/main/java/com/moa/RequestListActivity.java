@@ -1,12 +1,9 @@
-package com.moa.handler;
+package com.moa;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.moa.R;
-
-public class RequestListActivity extends AppCompatActivity {
+public class RequestListActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
