@@ -1,35 +1,35 @@
 package com.moa;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
 
 import com.moa.handler.BackPressCloseHandler;
 
-public class MainActivity extends AppCompatActivity {
-    private static final String MAIN_URL= "http://5racle.powerlinux.co.kr/admin";
+public class LoginActivity extends Activity {
+    private static final String MAIN_URL= "http://192.168.30.166:8089/admin";
     private WebView webView;
     private BackPressCloseHandler backPressCloseHandler;
-    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Intent intent = new Intent(this, LoadingActivity.class);
-        startActivity(intent);
+        WebViewInterface mWebViewInterface = new WebViewInterface(LoginActivity.this, webView);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainmenu);
-        button = findViewById(R.id.button);
+        setContentView(R.layout.activity_main);
+        //--start of loading
+        backPressCloseHandler = new BackPressCloseHandler(this);
+        //--end of loading
+        webView = findViewById(R.id.webView);
+        webView.setWebViewClient(new MyWebClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setHorizontalScrollBarEnabled(false);//가로스크롤없애기
+        webView.setVerticalScrollBarEnabled(false);//세로스크롤없애기
+        webView.addJavascriptInterface(mWebViewInterface, "android");
+        webView.loadUrl(MAIN_URL);
     }
-    public void onClick(View v){
-        System.out.println("ok");
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-   /* class MyWebClient extends WebViewClient {
+    class MyWebClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     }
-
     @Override// -- 뒤로가기 클릭시 엑티비티 종료 및 전환이 아닌 이전 페이지로 이동하게 한다.
     public void onBackPressed() {
         if(webView.getOriginalUrl().equalsIgnoreCase(MAIN_URL)){
@@ -47,5 +46,5 @@ public class MainActivity extends AppCompatActivity {
         }else{
             super.onBackPressed();
         }
-    }*/
+    }
 }
