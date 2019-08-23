@@ -9,6 +9,7 @@ import com.moa.handler.BackPressCloseHandler;
 
 public class LoginActivity extends Activity {
     private static final String MAIN_URL= "http://5racle.powerlinux.co.kr/admin";
+
     private WebView webView;
     private BackPressCloseHandler backPressCloseHandler;
 

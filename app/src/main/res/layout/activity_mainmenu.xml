@@ -9,12 +9,15 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="150px"
         android:background="#512D8D"
         android:fontFamily="sans-serif"
         android:onClick="onClick"
         android:text="시작하기"
+        android:layout_marginTop="500dp"
         android:textColor="#FFFFFF"
+
         android:textSize="30dp" />
 </LinearLayout>
