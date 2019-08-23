@@ -8,7 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String MAIN_URL= "http://192.168.30.166:8089/admin";
+
+    private static final String MAIN_URL= "http://5racle.powerlinux.co.kr/admin";
 
     private Button button;
     @Override
