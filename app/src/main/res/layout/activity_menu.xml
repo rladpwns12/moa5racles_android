@@ -12,7 +12,6 @@
         android:orientation="horizontal">
 
         <Button
-            style="@style/TextAppearance.AppCompat.Button"
             android:id="@+id/userBtn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"

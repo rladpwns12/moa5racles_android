@@ -21,7 +21,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RequestListActivity extends Activity {
+public class ApplyListActivity extends Activity {
     private List<RequestListVO> list;
     private ListView listView;
     private ListAdapter listAdapter;
@@ -29,17 +29,18 @@ public class RequestListActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_requestlist);
+        setContentView(R.layout.activity_applylist);
         list = new ArrayList<RequestListVO>();
 
         new RequestListHttpThread("http://192.168.30.164:8089/mobile/host/list").start();
+
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        listView = findViewById(R.id.listView);
 
+        listView = findViewById(R.id.listView);
         listAdapter = new ListAdapter(list, this);
         listView.setAdapter(listAdapter);
     }

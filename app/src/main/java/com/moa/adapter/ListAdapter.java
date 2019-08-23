@@ -12,12 +12,12 @@ import com.moa.model.vo.RequestListVO;
 
 import java.util.List;
 
-public class RequestListAdapter extends BaseAdapter {
+public class ListAdapter extends BaseAdapter {
     List<RequestListVO> list;
     Context context;
     LayoutInflater layoutInflater;
 
-    public RequestListAdapter(List<RequestListVO> list, Context context){
+    public ListAdapter(List<RequestListVO> list, Context context){
         this.list = list;
         this.context = context;
         this.layoutInflater = layoutInflater.from(context);
@@ -42,14 +42,14 @@ public class RequestListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View itemLayout = view;
         if(view == null){
-            itemLayout = layoutInflater.inflate(R.layout.requestlist_item, viewGroup, false);
+            itemLayout = layoutInflater.inflate(R.layout.list_item, viewGroup, false);
         }
 
         TextView nickTxtV = (TextView)itemLayout.findViewById(R.id.nickTxtV);
         TextView dateTxtV = (TextView)itemLayout.findViewById(R.id.dateTxtV);
         TextView priceTxtV = (TextView)itemLayout.findViewById(R.id.priceTxtV);
-
-        System.out.println(list.get(i).getPrice());
+        System.out.println("ddddddddddddddddd"+list);
+        System.out.println(i+" : "+list.get(i).getPrice());
         nickTxtV.setText(list.get(i).getNick());
         dateTxtV.setText(list.get(i).getDate());
         priceTxtV.setText(list.get(i).getPrice()+"원");
