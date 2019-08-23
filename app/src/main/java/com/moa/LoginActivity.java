@@ -8,7 +8,7 @@ import android.webkit.WebViewClient;
 import com.moa.handler.BackPressCloseHandler;
 
 public class LoginActivity extends Activity {
-    private static final String MAIN_URL= "http://192.168.30.164:8089/admin";
+    private static final String MAIN_URL= "http://192.168.30.166:8089/admin";
     private WebView webView;
     private BackPressCloseHandler backPressCloseHandler;
 
