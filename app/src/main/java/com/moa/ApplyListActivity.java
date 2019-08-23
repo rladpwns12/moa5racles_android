@@ -6,8 +6,8 @@ import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.moa.adapter.ListAdapter;
-import com.moa.model.vo.RequestListVO;
+import com.moa.adapter.ApplyListAdapter;
+import com.moa.model.vo.ApplyListInfoVO;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -22,17 +22,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ApplyListActivity extends Activity {
-    private List<RequestListVO> list;
+    private List<ApplyListInfoVO> list;
     private ListView listView;
-    private ListAdapter listAdapter;
+    private ApplyListAdapter applyListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_applylist);
-        list = new ArrayList<RequestListVO>();
+        list = new ArrayList<ApplyListInfoVO>();
 
-        new RequestListHttpThread("http://192.168.30.164:8089/mobile/host/list").start();
+        new RequestListHttpThread("http://192.168.30.164:8089/mobile/user/list").start();
 
         try {
             Thread.sleep(1000);
@@ -41,8 +41,8 @@ public class ApplyListActivity extends Activity {
         }
 
         listView = findViewById(R.id.listView);
-        listAdapter = new ListAdapter(list, this);
-        listView.setAdapter(listAdapter);
+        applyListAdapter = new ApplyListAdapter(list, this);
+        listView.setAdapter(applyListAdapter);
     }
 
 
@@ -101,8 +101,11 @@ public class ApplyListActivity extends Activity {
 
                 for(int i = 0; i < jsonArray.length(); i++){
                     JSONObject obj = jsonArray.getJSONObject(i);
-                    list.add(new RequestListVO(obj.get("date").toString(),obj.get("time").toString(),
-                            obj.get("nick").toString(),obj.get("price").toString()));
+                    ApplyListInfoVO applyListInfoVO = new ApplyListInfoVO(obj.getString("date"),obj.getString("time"),
+                            obj.getString("nick"),obj.getString("price"),obj.getString("transactionType"),
+                            obj.getString("baseAddress"),obj.getString("detailAddress"));
+
+                    list.add(applyListInfoVO);
                 }
                             }catch (Exception e){
                 Log.d("RequestListActivity",e.getMessage());
