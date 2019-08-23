@@ -3,12 +3,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="10"
+    android:background="#ffffff"
     android:orientation="vertical" >
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/moa_menu_02"
+        android:background="@drawable/moa_menu_01"
         android:layout_weight="7"/>
     <ListView
         android:id="@+id/listView"

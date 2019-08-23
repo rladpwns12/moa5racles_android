@@ -14,15 +14,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         Intent intent = new Intent(this, LoadingActivity.class);
         startActivity(intent);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainmenu);
-        button = findViewById(R.id.button);
+        button = (Button)findViewById(R.id.button);
 
     }
+
     public void onClick(View v){
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
  
