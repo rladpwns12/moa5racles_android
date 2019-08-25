@@ -14,7 +14,7 @@ public class LoadingActivity extends Activity {
         setContentView(R.layout.activity_loading);
 
         ImageView load = (ImageView)findViewById(R.id.loading_view);
-        Glide.with(this).load(R.raw.main_loading).into(load);
+        Glide.with(this).load(R.raw.m_main_loading).into(load);
 
         startLoading();
 

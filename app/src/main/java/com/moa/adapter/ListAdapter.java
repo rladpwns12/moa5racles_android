@@ -48,11 +48,13 @@ public class ListAdapter extends BaseAdapter {
         TextView nickTxtV = (TextView)itemLayout.findViewById(R.id.nickTxtV);
         TextView dateTxtV = (TextView)itemLayout.findViewById(R.id.dateTxtV);
         TextView priceTxtV = (TextView)itemLayout.findViewById(R.id.priceTxtV);
-        System.out.println("ddddddddddddddddd"+list);
-        System.out.println(i+" : "+list.get(i).getPrice());
-        nickTxtV.setText(list.get(i).getNick());
-        dateTxtV.setText(list.get(i).getDate());
-        priceTxtV.setText(list.get(i).getPrice()+"원");
+        TextView periodTxtV = (TextView)itemLayout.findViewById(R.id.periodTxtV);
+
+
+        nickTxtV.setText(list.get(i).getNick().toString());
+        dateTxtV.setText("신청일자 "+list.get(i).getDate());
+        priceTxtV.setText(list.get(i).getPrice()+" 원");
+        periodTxtV.setText("보관기간 "+list.get(i).getStartDate()+" ~ "+list.get(i).getEndDate());
 
         return itemLayout;
     }

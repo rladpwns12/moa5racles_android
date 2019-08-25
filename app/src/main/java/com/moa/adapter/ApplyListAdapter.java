@@ -47,7 +47,7 @@ public class ApplyListAdapter extends BaseAdapter {
 
         TextView nickTxtV = (TextView)itemLayout.findViewById(R.id.nickTxtV);
         TextView dateTxtV = (TextView)itemLayout.findViewById(R.id.dateTxtV);
-        TextView priceTxtV = (TextView)itemLayout.findViewById(R.id.priceTxtV);
+        TextView detailAddressTxtv = (TextView)itemLayout.findViewById(R.id.detailAddressTxtV);
         TextView addressTxtV = (TextView)itemLayout.findViewById(R.id.addressTxtV);
         TextView typeTxtV = (TextView)itemLayout.findViewById(R.id.typeTxtV);
 
@@ -55,9 +55,10 @@ public class ApplyListAdapter extends BaseAdapter {
 
         nickTxtV.setText(list.get(i).getNick());
         dateTxtV.setText("신청날짜 "+list.get(i).getDate());
-        priceTxtV.setText("요청가격 "+list.get(i).getPrice()+"원");
-        addressTxtV.setText("주소 "+list.get(i).getBaseAddress()+" "+list.get(i).getDetailAddress());
+        addressTxtV.setText(list.get(i).getBaseAddress());
+        detailAddressTxtv.setText(list.get(i).getDetailAddress());
         typeTxtV.setText(list.get(i).getTransactionType());
+        System.out.println(list.get(i));
         return itemLayout;
     }
 }

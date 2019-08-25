@@ -12,17 +12,27 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:text="최민성짱"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textColor="#000000"/>
+
     <TextView
         android:id="@+id/dateTxtV"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_below="@id/nickTxtV"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="신청일자 2019-08-22 19:20:22"
+        android:textSize="15dp"/>
+    <TextView
+        android:id="@+id/periodTxtV"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/dateTxtV"
+        android:layout_marginLeft="20dp"
         android:layout_marginBottom="10dp"
-        android:text="2019-08-22 19:20:22"
-        android:textSize="10dp"/>
+        android:text="보관일자 2019-01-01 ~ 2020-01-01"
+        android:textSize="15dp"/>
 
     <TextView
         android:id="@+id/priceTxtV"
@@ -32,7 +42,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:text="150000원"
-        android:textSize="10dp"
+        android:textSize="18dp"
         android:textColor="#000000"/>
 
 </RelativeLayout>

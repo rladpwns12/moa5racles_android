@@ -39,7 +39,6 @@ public class RequestListActivity extends Activity {
             e.printStackTrace();
         }
         listView = findViewById(R.id.listView);
-
         listAdapter = new ListAdapter(list, this);
         listView.setAdapter(listAdapter);
     }
@@ -101,11 +100,13 @@ public class RequestListActivity extends Activity {
                 for(int i = 0; i < jsonArray.length(); i++){
                     JSONObject obj = jsonArray.getJSONObject(i);
                     list.add(new RequestListVO(obj.get("date").toString(),obj.get("time").toString(),
-                            obj.get("nick").toString(),obj.get("price").toString()));
+                            obj.get("nick").toString(),obj.get("price").toString() , obj.get("state").toString(),
+                            obj.get("startDate").toString(), obj.get("endDate").toString()));
+                    System.out.println(i+" : "+list.get(i));
                 }
-                            }catch (Exception e){
-                Log.d("RequestListActivity",e.getMessage());
-            }
+                }catch (Exception e){
+                    Log.d("RequestListActivity",e.getMessage());
+                }
             return;
         }
     }
