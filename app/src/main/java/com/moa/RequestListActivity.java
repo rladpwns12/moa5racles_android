@@ -3,6 +3,8 @@ package com.moa;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -42,15 +44,16 @@ public class RequestListActivity extends Activity {
         listAdapter = new ListAdapter(list, this);
         listView.setAdapter(listAdapter);
 
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                int articleNum = ((RequestListVO)listAdapter.getItem(i)).getArticleNum();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                int articleNum = ((RequestListVO)listAdapter.getItem(i)).getArticleNum();
 //                Intent intent = new Intent(this, userRequestInfoActivity.class);
 //                intent.putExtra("articleNum",articleNum);
 //                startActivity(intent);
-//            }
-//        });
+                Toast.makeText(getApplicationContext(),"게시글 번호 : " + articleNum,Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 
