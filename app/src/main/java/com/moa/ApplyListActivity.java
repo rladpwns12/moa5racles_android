@@ -43,6 +43,16 @@ public class ApplyListActivity extends Activity {
         listView = findViewById(R.id.listView);
         applyListAdapter = new ApplyListAdapter(list, this);
         listView.setAdapter(applyListAdapter);
+
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                int articleNum = ((ApplyListInfoVO)applyListAdapter.getItem(i)).getArticleNum();
+//                Intent intent = new Intent(this, userRequestInfoActivity.class);
+//                intent.putExtra("articleNum",articleNum);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 
@@ -103,7 +113,7 @@ public class ApplyListActivity extends Activity {
                     JSONObject obj = jsonArray.getJSONObject(i);
                     ApplyListInfoVO applyListInfoVO = new ApplyListInfoVO(obj.getString("date"),obj.getString("time"),
                             obj.getString("nick"),obj.getString("price"),obj.getString("transactionType"),
-                            obj.getString("baseAddress"),obj.getString("detailAddress"));
+                            obj.getString("baseAddress"),obj.getString("detailAddress"),Integer.parseInt(obj.get("articleNum").toString()));
 
                     list.add(applyListInfoVO);
                 }
