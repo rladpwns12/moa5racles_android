@@ -34,7 +34,7 @@ public class ApplyListActivity extends Activity {
         setContentView(R.layout.activity_applylist);
         list = new ArrayList<ApplyListInfoVO>();
 
-        new RequestListHttpThread("http://192.168.30.164:8089/mobile/user/list").start();
+        new RequestListHttpThread("http://5racle.powerlinux.co.kr/mobile/user/list").start();
 
         try {
             Thread.sleep(1000);

@@ -4,12 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
 import com.moa.handler.BackPressCloseHandler;
 
 public class LoginActivity extends Activity {
     private static final String MAIN_URL= "http://5racle.powerlinux.co.kr/admin";
-
     private WebView webView;
     private BackPressCloseHandler backPressCloseHandler;
 
@@ -18,9 +16,11 @@ public class LoginActivity extends Activity {
         WebViewInterface mWebViewInterface = new WebViewInterface(LoginActivity.this, webView);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //--start of loading
         backPressCloseHandler = new BackPressCloseHandler(this);
         //--end of loading
+
         webView = findViewById(R.id.webView);
         webView.setWebViewClient(new MyWebClient());
         webView.getSettings().setJavaScriptEnabled(true);

@@ -34,7 +34,7 @@ public class RequestListActivity extends Activity {
         setContentView(R.layout.activity_requestlist);
         list = new ArrayList<RequestListVO>();
 
-        new RequestListHttpThread("http://192.168.30.164:8089/mobile/host/list").start();
+        new RequestListHttpThread("http://5racle.powerlinux.co.kr/mobile/host/list").start();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

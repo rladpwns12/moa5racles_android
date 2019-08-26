@@ -3,6 +3,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.1"
+    lintOptions {
+        checkReleaseBuilds false
+
+    }
     defaultConfig {
         applicationId "com.moa"
         minSdkVersion 14
@@ -11,6 +15,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false

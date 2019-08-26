@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String MAIN_URL= "http://192.168.30.164:8089/admin";
+    private static final String MAIN_URL= "http://5racle.powerlinux.co.kr/admin";
 
     private Button button;
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });
