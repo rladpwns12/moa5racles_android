@@ -59,6 +59,7 @@ public class ApplyListAdapter extends BaseAdapter {
         detailAddressTxtv.setText(list.get(i).getDetailAddress());
         typeTxtV.setText(list.get(i).getTransactionType());
         System.out.println(list.get(i));
+
         return itemLayout;
     }
 }
