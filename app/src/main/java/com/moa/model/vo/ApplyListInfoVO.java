@@ -8,9 +8,10 @@ public class ApplyListInfoVO {
     private String transactionType;
     private String baseAddress;
     private String detailAddress;
+    private int articleNum;
 
 
-    public ApplyListInfoVO(String date, String time, String nick, String price, String transactionType, String baseAddress, String detailAddress) {
+    public ApplyListInfoVO(String date, String time, String nick, String price, String transactionType, String baseAddress, String detailAddress,int articleNum) {
         this.date = date;
         this.time = time;
         this.nick = nick;
@@ -18,6 +19,7 @@ public class ApplyListInfoVO {
         this.transactionType = transactionType;
         this.baseAddress = baseAddress;
         this.detailAddress = detailAddress;
+        this.articleNum = articleNum;
     }
 
     public String getDate() {
@@ -76,6 +78,14 @@ public class ApplyListInfoVO {
         this.detailAddress = detailAddress;
     }
 
+    public int getArticleNum() {
+        return articleNum;
+    }
+
+    public void setArticleNum(int articleNum) {
+        this.articleNum = articleNum;
+    }
+
     @Override
     public String toString() {
         return "ApplyListInfoVO{" +
@@ -86,6 +96,7 @@ public class ApplyListInfoVO {
                 ", transactionType='" + transactionType + '\'' +
                 ", baseAddress='" + baseAddress + '\'' +
                 ", detailAddress='" + detailAddress + '\'' +
+                ", articleNum=" + articleNum +
                 '}';
     }
 }

@@ -8,8 +8,9 @@ public class RequestListVO {
     private String state;
     private String startDate;
     private String endDate;
+    private int articleNum;
 
-    public RequestListVO(String date, String time, String nick, String price, String state, String startDate, String endDate) {
+    public RequestListVO(String date, String time, String nick, String price, String state, String startDate, String endDate, int articleNum) {
         this.date = date;
         this.time = time;
         this.nick = nick;
@@ -17,6 +18,7 @@ public class RequestListVO {
         this.state = state;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.articleNum = articleNum;
     }
 
     public String getDate() {
@@ -75,6 +77,14 @@ public class RequestListVO {
         this.endDate = endDate;
     }
 
+    public int getArticleNum() {
+        return articleNum;
+    }
+
+    public void setArticleNum(int articleNum) {
+        this.articleNum = articleNum;
+    }
+
     @Override
     public String toString() {
         return "RequestListVO{" +
@@ -85,6 +95,7 @@ public class RequestListVO {
                 ", state='" + state + '\'' +
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +
+                ", articleNum=" + articleNum +
                 '}';
     }
 }

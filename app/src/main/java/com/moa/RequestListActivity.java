@@ -41,6 +41,16 @@ public class RequestListActivity extends Activity {
         listView = findViewById(R.id.listView);
         listAdapter = new ListAdapter(list, this);
         listView.setAdapter(listAdapter);
+
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                int articleNum = ((RequestListVO)listAdapter.getItem(i)).getArticleNum();
+//                Intent intent = new Intent(this, userRequestInfoActivity.class);
+//                intent.putExtra("articleNum",articleNum);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 
@@ -101,7 +111,7 @@ public class RequestListActivity extends Activity {
                     JSONObject obj = jsonArray.getJSONObject(i);
                     list.add(new RequestListVO(obj.get("date").toString(),obj.get("time").toString(),
                             obj.get("nick").toString(),obj.get("price").toString() , obj.get("state").toString(),
-                            obj.get("startDate").toString(), obj.get("endDate").toString()));
+                            obj.get("startDate").toString(), obj.get("endDate").toString(),Integer.parseInt(obj.get("articleNum").toString())));
                     System.out.println(i+" : "+list.get(i));
                 }
                 }catch (Exception e){

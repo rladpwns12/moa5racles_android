@@ -29,8 +29,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/centerTextVIew"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/centerTextVIew"
+            android:layout_marginBottom="-15dp"
             android:fontFamily="@font/bmhannapro"
             android:text="물품 요청 목록"
             android:textSize="15dp"
