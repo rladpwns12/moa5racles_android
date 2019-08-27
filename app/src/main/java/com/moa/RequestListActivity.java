@@ -1,6 +1,7 @@
 package com.moa;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -48,10 +49,9 @@ public class RequestListActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 int articleNum = ((RequestListVO)listAdapter.getItem(i)).getArticleNum();
-//                Intent intent = new Intent(this, userRequestInfoActivity.class);
-//                intent.putExtra("articleNum",articleNum);
-//                startActivity(intent);
-                Toast.makeText(getApplicationContext(),"게시글 번호 : " + articleNum,Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), RequestInfoActivity.class);
+                intent.putExtra("articleNum",articleNum);
+                startActivity(intent);
             }
         });
     }
