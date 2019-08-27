@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"/>
+        <LinearLayout
+            android:layout_alignBottom="@id/flipper"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgIndex0"
+                android:src="@drawable/white"
+                android:paddingTop="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imgIndex1"
+                android:src="@drawable/white"
+                android:paddingTop="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity ="center"
+        android:fillViewport="true"
+        android:layout_marginTop="0dp"
+        android:id="@+id/scrollView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/profileImg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/profile"/>
+            <TextView
+                android:id="@+id/nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@id/profileImg"
+                android:text="choiminsoeng"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="작성일자 2019/08/12"
+                android:textSize="10sp"/>
+
+            <!-- start of 거래 정보 -->
+            <TextView
+                android:id="@+id/infoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="거래 정보"
+                android:textSize="15sp"
+                android:textColor="#544667"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/profileImg"/>
+            <TextView
+                android:id="@+id/mPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="측정가격"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/infoTitle"/>
+            <TextView
+                android:id="@+id/mPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30,000"
+                android:textSize="13dp"
+                android:layout_toRightOf="@id/mPriceTitle"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/infoTitle"/>
+            <TextView
+                android:id="@+id/pPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="흥정가격"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/mPrice"
+                android:layout_below="@id/infoTitle"/>
+            <TextView
+                android:id="@+id/pPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30,000"
+                android:textSize="13dp"
+                android:layout_toRightOf="@id/pPriceTitle"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/infoTitle"/>
+
+            <TextView
+                android:id="@+id/periodTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보관기간"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/mPriceTitle"/>
+            <TextView
+                android:id="@+id/period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-08-23 ~ 2019-10-24"
+                android:textSize="13dp"
+                android:layout_toRightOf="@id/periodTitle"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/mPrice"/>
+
+            <TextView
+                android:id="@+id/typeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="거래방식"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/periodTitle"/>
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="무관"
+                android:textSize="13dp"
+                android:layout_toRightOf="@id/typeTitle"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/period"/>
+
+            <!-- start of 물품 정보 -->
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="물품 정보"
+                android:textSize="15sp"
+                android:textColor="#544667"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/typeTitle"/>
+            <TableLayout
+                android:id="@+id/productTable"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/productTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:text="NO" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="3"
+                        android:background="@drawable/border"
+                        android:text="카테고리" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="5"
+                        android:background="@drawable/border"
+                        android:text="물건명" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:text="물건개수" />
+                </TableRow>
+                <TableRow
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_bottom"
+                        android:text="1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="3"
+                        android:background="@drawable/border_bottom"
+                        android:text="의류" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="5"
+                        android:background="@drawable/border_bottom"
+                        android:text="프로그래밍 책" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_bottom"
+                        android:text="1" />
+                </TableRow>
+            </TableLayout>
+
+
+            <!-- start of 전달 내용 -->
+            <TextView
+                android:id="@+id/requestTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전달 내용"
+                android:textSize="15sp"
+                android:textColor="#544667"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/productTable"/>
+
+            <EditText
+                android:id="@+id/requestContent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/requestTitle"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:paddingTop="5dp"
+                android:text="집 대청소를 하는데 책이 너무 많아서 청소하는데 방해될 것 같습니다. 청소하는 동안 전공 책과 피규어 맡깁니다."
+                android:textSize="13sp"
+                android:gravity="left"
+                android:background="@drawable/border"
+                android:focusable="false"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="뒤로가기"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:background="#544667"
+                android:layout_below="@id/requestContent"
+                android:layout_centerHorizontal="true"
+                android:onClick="before"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

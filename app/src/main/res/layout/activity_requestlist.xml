@@ -43,8 +43,9 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
+        android:divider="#ededed"
+        android:dividerHeight="7dp"
         android:background="#ffffff">
-
     </ListView>
 
 
